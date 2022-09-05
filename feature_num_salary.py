@@ -101,12 +101,13 @@ def get_salary(data_path):
 if __name__ == "__main__":
     print("running...")
 
-    data_path = '../data/all_sample_20220821_spark.csv'
+    data_path = '../data_20220831/raw_cvjd_20220831_spark.csv'
+
     all_data = get_salary(data_path)
 
     print(all_data[['desiredSalary', 'currentSalary', 'parsed_desiredSalary', 'parsed_currentSalary']])
     print(all_data[['desiredSalary', 'currentSalary', 'parsed_desiredSalary', 'parsed_currentSalary']].info())
 
-    all_data[['parsed_desiredSalary', 'parsed_currentSalary']].to_csv('../data/salary.csv')
+    all_data[['parsed_desiredSalary', 'parsed_currentSalary']].to_csv('../data_20220831/salary.csv')
 
     print('all is well')

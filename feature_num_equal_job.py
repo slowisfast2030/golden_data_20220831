@@ -116,10 +116,10 @@ def get_equal_word_num(series, col_list):
 if __name__ == "__main__":
     print("running...")
 
-    data_path = '../data/all_sample_20220821_spark.csv'
+    data_path = '../data_20220831/raw_cvjd_20220831_spark.csv'
     all_data = get_text_jieba_filter(data_path)
     print(all_data["equal_job"])
-    all_data[['equal_job']].to_csv('../data/equal_job.csv')
+    all_data[['equal_job']].to_csv('../data_20220831/equal_job.csv')
     print("all is well!")
 
 

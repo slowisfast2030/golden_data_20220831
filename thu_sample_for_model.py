@@ -167,7 +167,8 @@ def get_tfidf_pca_from_text_cols(data_path, col_name_list, dimension):
 if __name__ == "__main__":
     print("running...")
 
-    data_path = '../data/all_sample_20220821_spark.csv'
+    data_path = '../data_20220831/raw_cvjd_20220831_spark.csv'
+
     dimension = 20
     
     print("\n从文本列获取tfidf_pca向量\n")
@@ -180,19 +181,19 @@ if __name__ == "__main__":
     col_name_list6 = ['jobTracks']
    
     tfidf_pca1 = get_tfidf_pca_from_text_cols(data_path, col_name_list1, dimension=30)
-    tfidf_pca1.to_csv('../data/title_category_tags_tfidf_pca.csv')
+    tfidf_pca1.to_csv('../data_20220831/title_category_tags_tfidf_pca.csv')
 
     tfidf_pca2 = get_tfidf_pca_from_text_cols(data_path, col_name_list2, dimension=70)
-    tfidf_pca2.to_csv('../data/description_tfidf_pca.csv')
+    tfidf_pca2.to_csv('../data_20220831/description_tfidf_pca.csv')
 
     tfidf_pca3 = get_tfidf_pca_from_text_cols(data_path, col_name_list3, dimension=70)
-    tfidf_pca3.to_csv('../data/requirement_tfidf_pca.csv')
+    tfidf_pca3.to_csv('../data_20220831/requirement_tfidf_pca.csv')
 
     tfidf_pca4 = get_tfidf_pca_from_text_cols(data_path, col_name_list4, dimension=40)
-    tfidf_pca4.to_csv('../data/position_tfidf_pca.csv')
+    tfidf_pca4.to_csv('../data_20220831/position_tfidf_pca.csv')
 
     tfidf_pca5 = get_tfidf_pca_from_text_cols(data_path, col_name_list5, dimension=30)
-    tfidf_pca5.to_csv('../data/skills_tfidf_pca.csv')
+    tfidf_pca5.to_csv('../data_20220831/skills_tfidf_pca.csv')
     
     print("all is well")
 

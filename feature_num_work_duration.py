@@ -80,10 +80,11 @@ def get_work_duration_mean(data_path):
 if __name__ == "__main__":
     print("running...")
 
-    data_path = '../data/all_sample_20220821_spark.csv'
+    data_path = '../data_20220831/raw_cvjd_20220831_spark.csv'
+
     all_data = get_work_duration_mean(data_path)
 
     print(all_data[['jobTracks', 'job_time_delta', 'work_duration_mean']])
     print(all_data[['jobTracks', 'job_time_delta', 'work_duration_mean']].info())
 
-    all_data[['work_duration_mean']].to_csv('../data/work_duration_mean.csv')
+    all_data[['work_duration_mean']].to_csv('../data_20220831/work_duration_mean.csv')
